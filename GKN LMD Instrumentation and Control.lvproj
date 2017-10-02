@@ -8,12 +8,15 @@
 	<Property Name="varPersistentID:{67E86976-24A0-4101-A5B6-7114EF95A9DE}" Type="Ref">/NI-PXIe8880-2F2582D7/SHARED VARIABLES.lvlib/TC</Property>
 	<Property Name="varPersistentID:{6CCBABE2-D502-4ADD-94E8-FA85CEDA87D4}" Type="Ref">/NI-PXIe8880-2F2582D7/BeadScanVariables.lvlib/Window Bead #3</Property>
 	<Property Name="varPersistentID:{80371F43-93E6-439D-9A11-6244513595CE}" Type="Ref">/NI-PXIe8880-2F2582D7/BeadScanVariables.lvlib/ScanData</Property>
+	<Property Name="varPersistentID:{813E79E8-F7AA-4A84-8674-1A733D8787CA}" Type="Ref">/NI-PXIe8880-2F2582D7/SHARED VARIABLES.lvlib/Deposition Trigger</Property>
+	<Property Name="varPersistentID:{982C2663-14E6-45A8-B410-E684ACCD1CAB}" Type="Ref">/NI-PXIe8880-2F2582D7/SHARED VARIABLES.lvlib/Laser Power kW</Property>
 	<Property Name="varPersistentID:{AB121C6E-69DD-49D5-AD54-D6883A9A7468}" Type="Ref">/NI-PXIe8880-2F2582D7/BeadScanVariables.lvlib/BeadScanComplete</Property>
 	<Property Name="varPersistentID:{C54CBBF2-4472-45BD-9754-480758F9BEE9}" Type="Ref">/NI-PXIe8880-2F2582D7/BeadScanVariables.lvlib/BeadScanPath</Property>
 	<Property Name="varPersistentID:{D880106A-D2A8-4DD0-B414-40E1E3DFBF9D}" Type="Ref">/NI-PXIe8880-2F2582D7/BeadScanVariables.lvlib/Center Bead #1</Property>
 	<Property Name="varPersistentID:{E978711E-B9A2-4041-A7B9-A31A507FEA01}" Type="Ref">/NI-PXIe8880-2F2582D7/BeadScanVariables.lvlib/Scan Position</Property>
 	<Property Name="varPersistentID:{F1355178-4D6C-46E6-8575-05C7CC7F5398}" Type="Ref">/NI-PXIe8880-2F2582D7/SHARED VARIABLES.lvlib/TC's Array</Property>
 	<Property Name="varPersistentID:{F58CE1DF-BCBA-46E8-98EA-5C2B19EC0EF4}" Type="Ref">/NI-PXIe8880-2F2582D7/BeadScanVariables.lvlib/FileWaiting</Property>
+	<Property Name="varPersistentID:{F9561B00-3581-40C0-BC5C-4BA9CC5338DE}" Type="Ref">/NI-PXIe8880-2F2582D7/SHARED VARIABLES.lvlib/Pyrometers</Property>
 	<Item Name="My Computer" Type="My Computer">
 		<Property Name="IOScan.Faults" Type="Str"></Property>
 		<Property Name="IOScan.NetVarPeriod" Type="UInt">100</Property>
@@ -39,6 +42,7 @@
 		<Item Name="Chad Magic Voodoo 4.vi" Type="VI" URL="../SubVIs/Chad Magic Voodoo 4.vi"/>
 		<Item Name="Chad Magic Voodoo.vi" Type="VI" URL="../../../Desktop/Chad Magic Voodoo.vi"/>
 		<Item Name="FTPBeadScan.vi" Type="VI" URL="../../../Desktop/FTPBeadScan.vi"/>
+		<Item Name="ORNL DataLogging.vi" Type="VI" URL="../SubVIs/ORNL DataLogging.vi"/>
 		<Item Name="TC GUI v2.vi" Type="VI" URL="../SubVIs/TC GUI v2.vi"/>
 		<Item Name="TC GUI.vi" Type="VI" URL="../SubVIs/TC GUI.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
@@ -159,6 +163,7 @@
 				<Item Name="FormatTime String.vi" Type="VI" URL="/&lt;vilib&gt;/express/express execution control/ElapsedTimeBlock.llb/FormatTime String.vi"/>
 				<Item Name="Get Semaphore Status.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/semaphor.llb/Get Semaphore Status.vi"/>
 				<Item Name="GetNamedSemaphorePrefix.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/semaphor.llb/GetNamedSemaphorePrefix.vi"/>
+				<Item Name="High Resolution Relative Seconds.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/High Resolution Relative Seconds.vi"/>
 				<Item Name="NI_AALBase.lvlib" Type="Library" URL="/&lt;vilib&gt;/Analysis/NI_AALBase.lvlib"/>
 				<Item Name="NI_AALPro.lvlib" Type="Library" URL="/&lt;vilib&gt;/Analysis/NI_AALPro.lvlib"/>
 				<Item Name="NI_FTP.lvlib" Type="Library" URL="/&lt;vilib&gt;/FTP/NI_FTP.lvlib"/>
@@ -267,15 +272,19 @@ AddOutputFilter chunkFilter
 		<Property Name="target.WebServer.ViAccess" Type="Str">+*</Property>
 		<Property Name="target.webservices.SecurityAPIKey" Type="Str">PqVr/ifkAQh+lVrdPIykXlFvg12GhhQFR8H9cUhphgg=:pTe9HRlQuMfJxAG6QCGq7UvoUpJzAzWGKy5SbZ+roSU=</Property>
 		<Property Name="target.webservices.ValidTimestampWindow" Type="Int">15</Property>
-		<Item Name="BeadScanVariables.lvlib" Type="Library" URL="../../../Desktop/BeadScanVariables.lvlib"/>
-		<Item Name="DeviceNet Read Data.vi" Type="VI" URL="../../../Downloads/DeviceNet Read Data.vi"/>
-		<Item Name="DeviceNet Test.vi" Type="VI" URL="../../DeviceNet Test.vi"/>
+		<Item Name="GKN OLD VIs" Type="Folder">
+			<Item Name="DeviceNet Test.vi" Type="VI" URL="../../DeviceNet Test.vi"/>
+			<Item Name="TENT O2 SENSOR.vi" Type="VI" URL="../SubVIs/TENT O2 SENSOR.vi"/>
+			<Item Name="READ ALL TCS.vi" Type="VI" URL="../SubVIs/READ ALL TCS.vi"/>
+			<Item Name="lasers pew pew (2).vi" Type="VI" URL="../SubVIs/lasers pew pew (2).vi"/>
+			<Item Name="DeviceNet Read Data.vi" Type="VI" URL="../../../Downloads/DeviceNet Read Data.vi"/>
+		</Item>
 		<Item Name="Keyence Height Measurement.vi" Type="VI" URL="../../../Desktop/Keyence Height Measurement.vi"/>
-		<Item Name="READ ALL TCS.vi" Type="VI" URL="../SubVIs/READ ALL TCS.vi"/>
+		<Item Name="READ ALL PYR ORNL Ver1.vi" Type="VI" URL="../SubVIs/READ ALL PYR ORNL Ver1.vi"/>
+		<Item Name="READ ALL TCS ORNL Ver1.vi" Type="VI" URL="../SubVIs/READ ALL TCS ORNL Ver1.vi"/>
+		<Item Name="READ LASER POWER ORNL Ver1.vi" Type="VI" URL="../SubVIs/READ LASER POWER ORNL Ver1.vi"/>
+		<Item Name="BeadScanVariables.lvlib" Type="Library" URL="../../../Desktop/BeadScanVariables.lvlib"/>
 		<Item Name="SHARED VARIABLES.lvlib" Type="Library" URL="../Variable Libraries/SHARED VARIABLES.lvlib"/>
-		<Item Name="TENT O2 SENSOR.vi" Type="VI" URL="../SubVIs/TENT O2 SENSOR.vi"/>
-		<Item Name="READ ALL TCS v2.vi" Type="VI" URL="../SubVIs/READ ALL TCS v2.vi"/>
-		<Item Name="lasers pew pew (2).vi" Type="VI" URL="../SubVIs/lasers pew pew (2).vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="DAQmx Fill In Error Info.vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/miscellaneous.llb/DAQmx Fill In Error Info.vi"/>
