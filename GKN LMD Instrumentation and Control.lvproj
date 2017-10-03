@@ -1,5 +1,7 @@
 ﻿<?xml version='1.0' encoding='UTF-8'?>
 <Project Type="Project" LVVersion="16008000">
+	<Property Name="varPersistentID:{041D2657-7002-424B-A8F1-DA4A6048D987}" Type="Ref">/NI-PXIe8880-2F2582D7/BeadScanVariables.lvlib/PRINTorSCAN</Property>
+	<Property Name="varPersistentID:{07DAC4C1-D66A-4AC0-8BA7-0A77E47EC488}" Type="Ref">/NI-PXIe8880-2F2582D7/BeadScanVariables.lvlib/Scan Speed</Property>
 	<Property Name="varPersistentID:{1C690C0F-D796-4AC2-A44A-F0F7C435BF85}" Type="Ref">/NI-PXIe8880-2F2582D7/BeadScanVariables.lvlib/Shutter Open</Property>
 	<Property Name="varPersistentID:{2623D506-8021-4939-A352-BF74464DC94F}" Type="Ref">/NI-PXIe8880-2F2582D7/SHARED VARIABLES.lvlib/TC 10-18 Elements</Property>
 	<Property Name="varPersistentID:{328F5468-ABFE-41E4-A553-910F560BD8AE}" Type="Ref">/NI-PXIe8880-2F2582D7/SHARED VARIABLES.lvlib/TC 9Elements</Property>
@@ -9,6 +11,7 @@
 	<Property Name="varPersistentID:{6CCBABE2-D502-4ADD-94E8-FA85CEDA87D4}" Type="Ref">/NI-PXIe8880-2F2582D7/BeadScanVariables.lvlib/Window Bead #3</Property>
 	<Property Name="varPersistentID:{80371F43-93E6-439D-9A11-6244513595CE}" Type="Ref">/NI-PXIe8880-2F2582D7/BeadScanVariables.lvlib/ScanData</Property>
 	<Property Name="varPersistentID:{813E79E8-F7AA-4A84-8674-1A733D8787CA}" Type="Ref">/NI-PXIe8880-2F2582D7/SHARED VARIABLES.lvlib/Deposition Trigger</Property>
+	<Property Name="varPersistentID:{87E6A317-0D83-4924-B64D-15F90DB6B242}" Type="Ref">/NI-PXIe8880-2F2582D7/SHARED VARIABLES.lvlib/Kuka Code</Property>
 	<Property Name="varPersistentID:{982C2663-14E6-45A8-B410-E684ACCD1CAB}" Type="Ref">/NI-PXIe8880-2F2582D7/SHARED VARIABLES.lvlib/Laser Power kW</Property>
 	<Property Name="varPersistentID:{AB121C6E-69DD-49D5-AD54-D6883A9A7468}" Type="Ref">/NI-PXIe8880-2F2582D7/BeadScanVariables.lvlib/BeadScanComplete</Property>
 	<Property Name="varPersistentID:{C54CBBF2-4472-45BD-9754-480758F9BEE9}" Type="Ref">/NI-PXIe8880-2F2582D7/BeadScanVariables.lvlib/BeadScanPath</Property>
@@ -42,13 +45,16 @@
 		<Item Name="Chad Magic Voodoo 4.vi" Type="VI" URL="../SubVIs/Chad Magic Voodoo 4.vi"/>
 		<Item Name="Chad Magic Voodoo.vi" Type="VI" URL="../../../Desktop/Chad Magic Voodoo.vi"/>
 		<Item Name="FTPBeadScan.vi" Type="VI" URL="../../../Desktop/FTPBeadScan.vi"/>
+		<Item Name="HEIGHT CONTROL ORNL Ver1.vi" Type="VI" URL="../SubVIs/HEIGHT CONTROL ORNL Ver1.vi"/>
 		<Item Name="ORNL DataLogging.vi" Type="VI" URL="../SubVIs/ORNL DataLogging.vi"/>
+		<Item Name="Scan Filter (SubVI).vi" Type="VI" URL="../SubVIs/Scan Filter (SubVI).vi"/>
 		<Item Name="TC GUI v2.vi" Type="VI" URL="../SubVIs/TC GUI v2.vi"/>
 		<Item Name="TC GUI.vi" Type="VI" URL="../SubVIs/TC GUI.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="Acquire Semaphore.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/semaphor.llb/Acquire Semaphore.vi"/>
 				<Item Name="AddNamedSemaphorePrefix.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/semaphor.llb/AddNamedSemaphorePrefix.vi"/>
+				<Item Name="Check for Equality.vi" Type="VI" URL="/&lt;vilib&gt;/Waveform/WDTOps.llb/Check for Equality.vi"/>
 				<Item Name="Close Panel.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/victl.llb/Close Panel.vi"/>
 				<Item Name="compatReadText.vi" Type="VI" URL="/&lt;vilib&gt;/_oldvers/_oldvers.llb/compatReadText.vi"/>
 				<Item Name="Create Semaphore.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/semaphor.llb/Create Semaphore.vi"/>
@@ -158,16 +164,28 @@
 				<Item Name="Destroy Semaphore.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/semaphor.llb/Destroy Semaphore.vi"/>
 				<Item Name="DTbl Digital Size.vi" Type="VI" URL="/&lt;vilib&gt;/Waveform/DTblOps.llb/DTbl Digital Size.vi"/>
 				<Item Name="DTbl Uncompress Digital.vi" Type="VI" URL="/&lt;vilib&gt;/Waveform/DTblOps.llb/DTbl Uncompress Digital.vi"/>
+				<Item Name="DU64_U32SubtractWithBorrow.vi" Type="VI" URL="/&lt;vilib&gt;/Waveform/TSOps.llb/DU64_U32SubtractWithBorrow.vi"/>
 				<Item Name="DWDT Uncompress Digital.vi" Type="VI" URL="/&lt;vilib&gt;/Waveform/DWDTOps.llb/DWDT Uncompress Digital.vi"/>
+				<Item Name="Dynamic To Waveform Array.vi" Type="VI" URL="/&lt;vilib&gt;/express/express shared/transition.llb/Dynamic To Waveform Array.vi"/>
 				<Item Name="Error Cluster From Error Code.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Error Cluster From Error Code.vi"/>
+				<Item Name="ex_CorrectErrorChain.vi" Type="VI" URL="/&lt;vilib&gt;/express/express shared/ex_CorrectErrorChain.vi"/>
+				<Item Name="ex_GetAllExpressAttribs.vi" Type="VI" URL="/&lt;vilib&gt;/express/express shared/transition.llb/ex_GetAllExpressAttribs.vi"/>
+				<Item Name="ex_Modify Signal Name.vi" Type="VI" URL="/&lt;vilib&gt;/express/express shared/ex_Modify Signal Name.vi"/>
+				<Item Name="ex_Modify Signals Names.vi" Type="VI" URL="/&lt;vilib&gt;/express/express shared/ex_Modify Signals Names.vi"/>
+				<Item Name="ex_SmoothingDesign.vi" Type="VI" URL="/&lt;vilib&gt;/express/express analysis/FilterBlock.llb/ex_SmoothingDesign.vi"/>
+				<Item Name="ex_WaveformAttribs.ctl" Type="VI" URL="/&lt;vilib&gt;/express/express shared/transition.llb/ex_WaveformAttribs.ctl"/>
+				<Item Name="Express Waveform Components.vi" Type="VI" URL="/&lt;vilib&gt;/express/express shared/transition.llb/Express Waveform Components.vi"/>
 				<Item Name="FormatTime String.vi" Type="VI" URL="/&lt;vilib&gt;/express/express execution control/ElapsedTimeBlock.llb/FormatTime String.vi"/>
 				<Item Name="Get Semaphore Status.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/semaphor.llb/Get Semaphore Status.vi"/>
 				<Item Name="GetNamedSemaphorePrefix.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/semaphor.llb/GetNamedSemaphorePrefix.vi"/>
 				<Item Name="High Resolution Relative Seconds.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/High Resolution Relative Seconds.vi"/>
+				<Item Name="I128 Timestamp.ctl" Type="VI" URL="/&lt;vilib&gt;/Waveform/TSOps.llb/I128 Timestamp.ctl"/>
 				<Item Name="NI_AALBase.lvlib" Type="Library" URL="/&lt;vilib&gt;/Analysis/NI_AALBase.lvlib"/>
 				<Item Name="NI_AALPro.lvlib" Type="Library" URL="/&lt;vilib&gt;/Analysis/NI_AALPro.lvlib"/>
 				<Item Name="NI_FTP.lvlib" Type="Library" URL="/&lt;vilib&gt;/FTP/NI_FTP.lvlib"/>
 				<Item Name="NI_Gmath.lvlib" Type="Library" URL="/&lt;vilib&gt;/gmath/NI_Gmath.lvlib"/>
+				<Item Name="NI_MABase.lvlib" Type="Library" URL="/&lt;vilib&gt;/measure/NI_MABase.lvlib"/>
+				<Item Name="NI_MAPro.lvlib" Type="Library" URL="/&lt;vilib&gt;/measure/NI_MAPro.lvlib"/>
 				<Item Name="Not A Semaphore.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/semaphor.llb/Not A Semaphore.vi"/>
 				<Item Name="Obtain Semaphore Reference.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/semaphor.llb/Obtain Semaphore Reference.vi"/>
 				<Item Name="Open Panel.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/victl.llb/Open Panel.vi"/>
@@ -179,8 +197,11 @@
 				<Item Name="Semaphore RefNum" Type="VI" URL="/&lt;vilib&gt;/Utility/semaphor.llb/Semaphore RefNum"/>
 				<Item Name="Semaphore Refnum Core.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/semaphor.llb/Semaphore Refnum Core.ctl"/>
 				<Item Name="subElapsedTime.vi" Type="VI" URL="/&lt;vilib&gt;/express/express execution control/ElapsedTimeBlock.llb/subElapsedTime.vi"/>
+				<Item Name="subFilter.vi" Type="VI" URL="/&lt;vilib&gt;/express/express analysis/FilterBlock.llb/subFilter.vi"/>
 				<Item Name="System Exec.vi" Type="VI" URL="/&lt;vilib&gt;/Platform/system.llb/System Exec.vi"/>
+				<Item Name="Timestamp Subtract.vi" Type="VI" URL="/&lt;vilib&gt;/Waveform/TSOps.llb/Timestamp Subtract.vi"/>
 				<Item Name="Validate Semaphore Size.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/semaphor.llb/Validate Semaphore Size.vi"/>
+				<Item Name="Waveform Array To Dynamic.vi" Type="VI" URL="/&lt;vilib&gt;/express/express shared/transition.llb/Waveform Array To Dynamic.vi"/>
 				<Item Name="Write Delimited Spreadsheet (DBL).vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Write Delimited Spreadsheet (DBL).vi"/>
 				<Item Name="Write Delimited Spreadsheet (I64).vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Write Delimited Spreadsheet (I64).vi"/>
 				<Item Name="Write Delimited Spreadsheet (string).vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Write Delimited Spreadsheet (string).vi"/>
@@ -279,7 +300,7 @@ AddOutputFilter chunkFilter
 			<Item Name="lasers pew pew (2).vi" Type="VI" URL="../SubVIs/lasers pew pew (2).vi"/>
 			<Item Name="DeviceNet Read Data.vi" Type="VI" URL="../../../Downloads/DeviceNet Read Data.vi"/>
 		</Item>
-		<Item Name="Keyence Height Measurement.vi" Type="VI" URL="../../../Desktop/Keyence Height Measurement.vi"/>
+		<Item Name="GET BEAD PROFILE ORNL Ver1.vi" Type="VI" URL="../SubVIs/GET BEAD PROFILE ORNL Ver1.vi"/>
 		<Item Name="READ ALL PYR ORNL Ver1.vi" Type="VI" URL="../SubVIs/READ ALL PYR ORNL Ver1.vi"/>
 		<Item Name="READ ALL TCS ORNL Ver1.vi" Type="VI" URL="../SubVIs/READ ALL TCS ORNL Ver1.vi"/>
 		<Item Name="READ LASER POWER ORNL Ver1.vi" Type="VI" URL="../SubVIs/READ LASER POWER ORNL Ver1.vi"/>
