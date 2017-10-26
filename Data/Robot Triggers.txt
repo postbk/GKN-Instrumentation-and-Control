@@ -1,0 +1,156 @@
+; bead # 0
+if bead_order[j] == 0 then 
+
+trigger when path = 3.000 ONSTART delay = 0 DO $anout[27] = wr_speed*0.930
+trigger when path = 6.000 ONSTART delay = 0 DO $anout[27] = wr_speed*1.000
+trigger when path = 102.000 ONSTART delay = 0 DO $anout[27] = wr_speed*0.930
+trigger when path = 111.000 ONSTART delay = 0 DO $anout[27] = wr_speed*1.000
+trigger when path = 140.000 ONSTART delay = 0 DO $anout[27] = wr_speed*0.930
+$base = base_data[4]
+$act_base = 4
+$act_tool = 2
+lin_rel {y  150.000} C_VEL #base
+endif
+
+; bead # 1
+if bead_order[j] == 1 then 
+
+trigger when path = 16.000 ONSTART delay = 0 DO $anout[27] = wr_speed*1.070
+trigger when path = 17.000 ONSTART delay = 0 DO $anout[27] = wr_speed*1.080
+trigger when path = 18.000 ONSTART delay = 0 DO $anout[27] = wr_speed*1.090
+trigger when path = 20.000 ONSTART delay = 0 DO $anout[27] = wr_speed*1.100
+trigger when path = 22.000 ONSTART delay = 0 DO $anout[27] = wr_speed*1.110
+trigger when path = 24.000 ONSTART delay = 0 DO $anout[27] = wr_speed*1.120
+trigger when path = 31.000 ONSTART delay = 0 DO $anout[27] = wr_speed*1.110
+trigger when path = 33.000 ONSTART delay = 0 DO $anout[27] = wr_speed*1.100
+$base = base_data[4]
+$act_base = 4
+$act_tool = 2
+lin_rel {y  35.000} C_VEL #base
+trigger when path = 0.000 ONSTART delay = 0 DO $anout[27] = wr_speed*1.090
+trigger when path = 3.000 ONSTART delay = 0 DO $anout[27] = wr_speed*1.080
+trigger when path = 16.000 ONSTART delay = 0 DO $anout[27] = wr_speed*1.070
+trigger when path = 26.000 ONSTART delay = 0 DO $anout[27] = wr_speed*1.080
+trigger when path = 29.000 ONSTART delay = 0 DO $anout[27] = wr_speed*1.070
+trigger when path = 33.000 ONSTART delay = 0 DO $anout[27] = wr_speed*1.000
+$base = base_data[4]
+$act_base = 4
+$act_tool = 2
+lin_rel {y  115.000} C_VEL #base
+endif
+
+; bead # 2
+if bead_order[j] == 2 then 
+
+trigger when path = 0.000 ONSTART delay = 0 DO $anout[27] = wr_speed*1.300
+trigger when path = 2.000 ONSTART delay = 0 DO $anout[27] = wr_speed*1.250
+trigger when path = 3.000 ONSTART delay = 0 DO $anout[27] = wr_speed*1.162
+trigger when path = 4.000 ONSTART delay = 0 DO $anout[27] = wr_speed*1.094
+trigger when path = 5.000 ONSTART delay = 0 DO $anout[27] = wr_speed*1.000
+trigger when path = 7.000 ONSTART delay = 0 DO $anout[27] = wr_speed*0.984
+trigger when path = 8.000 ONSTART delay = 0 DO $anout[27] = wr_speed*0.912
+trigger when path = 9.000 ONSTART delay = 0 DO $anout[27] = wr_speed*0.886
+$base = base_data[4]
+$act_base = 4
+$act_tool = 2
+lin_rel {y  10.000} C_VEL #base
+trigger when path = 0.000 ONSTART delay = 0 DO $anout[27] = wr_speed*0.870
+trigger when path = 1.000 ONSTART delay = 0 DO $anout[27] = wr_speed*0.860
+trigger when path = 4.000 ONSTART delay = 0 DO $anout[27] = wr_speed*0.864
+trigger when path = 5.000 ONSTART delay = 0 DO $anout[27] = wr_speed*0.870
+trigger when path = 6.000 ONSTART delay = 0 DO $anout[27] = wr_speed*0.886
+trigger when path = 7.000 ONSTART delay = 0 DO $anout[27] = wr_speed*0.902
+trigger when path = 8.000 ONSTART delay = 0 DO $anout[27] = wr_speed*0.910
+trigger when path = 9.000 ONSTART delay = 0 DO $anout[27] = wr_speed*0.924
+$base = base_data[4]
+$act_base = 4
+$act_tool = 2
+lin_rel {y  10.000} C_VEL #base
+trigger when path = 0.000 ONSTART delay = 0 DO $anout[27] = wr_speed*1.000
+trigger when path = 61.000 ONSTART delay = 0 DO $anout[27] = wr_speed*0.930
+trigger when path = 62.000 ONSTART delay = 0 DO $anout[27] = wr_speed*0.944
+trigger when path = 63.000 ONSTART delay = 0 DO $anout[27] = wr_speed*1.000
+trigger when path = 69.000 ONSTART delay = 0 DO $anout[27] = wr_speed*0.972
+trigger when path = 70.000 ONSTART delay = 0 DO $anout[27] = wr_speed*0.920
+trigger when path = 71.000 ONSTART delay = 0 DO $anout[27] = wr_speed*0.894
+trigger when path = 72.000 ONSTART delay = 0 DO $anout[27] = wr_speed*0.864
+$base = base_data[4]
+$act_base = 4
+$act_tool = 2
+lin_rel {y  73.000} C_VEL #base
+trigger when path = 0.000 ONSTART delay = 0 DO $anout[27] = wr_speed*0.824
+trigger when path = 1.000 ONSTART delay = 0 DO $anout[27] = wr_speed*0.796
+trigger when path = 2.000 ONSTART delay = 0 DO $anout[27] = wr_speed*0.770
+trigger when path = 3.000 ONSTART delay = 0 DO $anout[27] = wr_speed*0.754
+trigger when path = 4.000 ONSTART delay = 0 DO $anout[27] = wr_speed*0.730
+trigger when path = 5.000 ONSTART delay = 0 DO $anout[27] = wr_speed*0.722
+trigger when path = 6.000 ONSTART delay = 0 DO $anout[27] = wr_speed*0.716
+trigger when path = 7.000 ONSTART delay = 0 DO $anout[27] = wr_speed*0.710
+$base = base_data[4]
+$act_base = 4
+$act_tool = 2
+lin_rel {y  8.000} C_VEL #base
+trigger when path = 0.000 ONSTART delay = 0 DO $anout[27] = wr_speed*0.808
+trigger when path = 1.000 ONSTART delay = 0 DO $anout[27] = wr_speed*1.050
+trigger when path = 2.000 ONSTART delay = 0 DO $anout[27] = wr_speed*1.290
+trigger when path = 3.000 ONSTART delay = 0 DO $anout[27] = wr_speed*1.300
+trigger when path = 16.000 ONSTART delay = 0 DO $anout[27] = wr_speed*1.056
+trigger when path = 17.000 ONSTART delay = 0 DO $anout[27] = wr_speed*0.824
+trigger when path = 18.000 ONSTART delay = 0 DO $anout[27] = wr_speed*0.770
+trigger when path = 19.000 ONSTART delay = 0 DO $anout[27] = wr_speed*0.780
+$base = base_data[4]
+$act_base = 4
+$act_tool = 2
+lin_rel {y  21.000} C_VEL #base
+trigger when path = 0.000 ONSTART delay = 0 DO $anout[27] = wr_speed*0.770
+trigger when path = 1.000 ONSTART delay = 0 DO $anout[27] = wr_speed*0.762
+trigger when path = 2.000 ONSTART delay = 0 DO $anout[27] = wr_speed*0.756
+trigger when path = 3.000 ONSTART delay = 0 DO $anout[27] = wr_speed*0.740
+trigger when path = 4.000 ONSTART delay = 0 DO $anout[27] = wr_speed*0.724
+trigger when path = 5.000 ONSTART delay = 0 DO $anout[27] = wr_speed*0.718
+trigger when path = 6.000 ONSTART delay = 0 DO $anout[27] = wr_speed*0.710
+trigger when path = 8.000 ONSTART delay = 0 DO $anout[27] = wr_speed*0.720
+$base = base_data[4]
+$act_base = 4
+$act_tool = 2
+lin_rel {y  9.000} C_VEL #base
+trigger when path = 0.000 ONSTART delay = 0 DO $anout[27] = wr_speed*0.736
+trigger when path = 1.000 ONSTART delay = 0 DO $anout[27] = wr_speed*0.764
+trigger when path = 2.000 ONSTART delay = 0 DO $anout[27] = wr_speed*0.796
+trigger when path = 3.000 ONSTART delay = 0 DO $anout[27] = wr_speed*0.828
+trigger when path = 4.000 ONSTART delay = 0 DO $anout[27] = wr_speed*0.860
+trigger when path = 5.000 ONSTART delay = 0 DO $anout[27] = wr_speed*0.882
+trigger when path = 6.000 ONSTART delay = 0 DO $anout[27] = wr_speed*0.902
+trigger when path = 7.000 ONSTART delay = 0 DO $anout[27] = wr_speed*0.918
+$base = base_data[4]
+$act_base = 4
+$act_tool = 2
+lin_rel {y  8.000} C_VEL #base
+trigger when path = 0.000 ONSTART delay = 0 DO $anout[27] = wr_speed*0.924
+trigger when path = 1.000 ONSTART delay = 0 DO $anout[27] = wr_speed*0.930
+trigger when path = 2.000 ONSTART delay = 0 DO $anout[27] = wr_speed*0.972
+trigger when path = 3.000 ONSTART delay = 0 DO $anout[27] = wr_speed*1.000
+$base = base_data[4]
+$act_base = 4
+$act_tool = 2
+lin_rel {y  11.000} C_VEL #base
+endif
+
+; bead # 3
+if bead_order[j] == 3 then 
+
+$base = base_data[4]
+$act_base = 4
+$act_tool = 2
+lin_rel {y  150.000} C_VEL #base
+endif
+
+; bead # 4
+if bead_order[j] == 4 then 
+
+$base = base_data[4]
+$act_base = 4
+$act_tool = 2
+lin_rel {y  150.000} C_VEL #base
+endif
+
